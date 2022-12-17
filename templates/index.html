@@ -80,16 +80,10 @@ var map = L.map('map').setView([25, 121.5], 13);
       attribution: '© OpenStreetMap'
     }).addTo(map);
 function o(){
-      var homeIcon = L.icon({
-    iconUrl: 'https://cdn-icons-png.flaticon.com/512/747/747846.png',
-
-    iconSize:     [30, 30],  
-    });
   var greenIcon = L.icon({
     iconUrl: 'https://o.remove.bg/downloads/cb00c6b8-bac8-493a-b151-5b61c89836d5/1000_F_529768072_ElB3AnRuR7R9CcPVq5IacCUqKGuWrc7c-removebg-preview.png',
     iconSize:     [50, 50],
   });
-  var marke = L.marker([25.027512, 121.511152], {icon: homeIcon}).bindPopup("<b>"+"我的家").addTo(map)
   for(var i=0;i<data["records"]["earthquake"].length;i++){
     var lat=Number(data['records']["earthquake"][i]["earthquakeInfo"]["epiCenter"]["epiCenterLat"]["value"])
     var lon=Number(data['records']["earthquake"][i]["earthquakeInfo"]["epiCenter"]["epiCenterLon"]["value"])
